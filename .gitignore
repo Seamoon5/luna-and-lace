@@ -25,3 +25,6 @@ dist-ssr
 
 # quarantined Openverse photo pool (kept at /tmp/opencode/quarantine-luna-images)
 public/images/
+
+# staging folder for scraped candidate photos (temporary)
+.photo-stage/

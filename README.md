@@ -43,43 +43,57 @@ lose them.
 
 ---
 
-## Product artwork
+## Product images
 
-Every product image is a **generated SVG** in `public/img/` — 44 files totalling
-about **215 KB**. There are no external image links, so nothing can break, nothing is
-downloaded from a third party at runtime, and the images stay crisp on any screen.
+Product photography comes from **Pixabay** and **Pexels**, downloaded into
+`public/img/photos/` and cropped to a consistent 1000 x 1250 (4:5) frame so every
+card lines up. Both licences allow free commercial use with no attribution needed,
+so these are safe for a real shop. Every file and its source photo id is listed in
+[`public/img/photos/CREDITS.md`](public/img/photos/CREDITS.md).
 
-The artwork is produced by a script, so it can be regenerated or restyled:
+The wide hero and banner images are cropped to 2000 x 1125 and 2000 x 700.
+
+One product, the **Silk Scrunchie Set**, has no usable stock photo anywhere
+(free libraries return spiders and hair close-ups), so it keeps a drawn
+illustration. Everything else is a real photograph.
+
+### How the photos were chosen
 
 ```bash
-python3 scripts/generate-art.py
+node scripts/fetch-photos.mjs      # download candidates into .photo-stage
+node scripts/contact.mjs all       # build a contact sheet to review them
+python3 scripts/build-photos.py    # crop + optimise the chosen ones
 ```
 
-It draws each product from a small library of vector shapes, applies one of two
-colourways per product (that pair is what the card hover-swap uses), and centres
-every piece into the same visual box on a shared warm backdrop.
+Free stock searches return a lot of irrelevant frames - branded boxes, clip art,
+animals, watermarked images. So candidates are downloaded first, laid out on a
+contact sheet, and picked **by eye** before anything reaches the site.
 
-### Replacing the artwork with real photos
+### Replacing the images with your own photography
 
 The catalogue only stores paths, so swapping in real photography is a data change,
-not a code change. Set `images` in `src/data/products.ts` to your own URLs or to files
-you drop into `public/`:
+not a code change. Drop your files into `public/img/photos/` and point
+`images` in `src/data/products.ts` at them:
 
 ```ts
-images: ["/img/my-photo-1.jpg", "/img/my-photo-2.jpg"],
+images: ["/img/photos/my-bag-1.jpg", "/img/photos/my-bag-2.jpg"],
 ```
 
-Recommended sizes: **1200 x 1500 px (4:5)** for product images, **2400 x 1350 px** for
-the wide hero.
+Recommended sizes: **1000 x 1250 px (4:5)** for product images, **2000 x 1125 px**
+for the hero.
 
 ---
 
 ## Project layout
 
 ```
-public/img/          generated product artwork (SVG)
+public/img/photos/    real product photography + CREDITS.md
+public/img/          drawn fallback illustrations (SVG)
 scripts/
-  generate-art.py    draws all product artwork
+  fetch-photos.mjs  downloads candidate photos from free stock libraries
+  contact.mjs       contact sheet of candidates, for reviewing them by eye
+  build-photos.py   crops and optimises the chosen photos into public/img/photos
+  generate-art.py   draws the fallback illustrations
   audit.mjs          crawls every route, reports broken images / console errors
   shots.mjs          screenshots pages at desktop and mobile widths
   sheet.mjs          contact sheet of all artwork, for reviewing it by eye
@@ -119,4 +133,5 @@ src/
 
 | Version | What changed |
 |---|---|
-| 1.0.0 | Full 19-page storefront, local mock data, generated SVG product artwork, lint and type-check clean. |
+| 1.1.0 | Replaced drawn artwork with real Pixabay/Pexels photography for 20 of 21 products, plus wide hero and banner photos. Reviewed every candidate by eye. |
+| 1.0.0 | Full 19-page storefront, local mock data, generated SVG artwork, lint and type-check clean. |

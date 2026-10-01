@@ -14,8 +14,8 @@ export default function Home() {
       {/* HERO */}
       <section className="relative h-[92vh] min-h-[600px] md:min-h-[720px] overflow-hidden bg-stone">
         <img
-          src="/img/hero-editorial.svg"
-          alt="Luna &amp; Lace accessories - bag, sunglasses, watch and earrings"
+          src="/img/photos/hero.jpg"
+          alt="Woman carrying a leather shoulder bag"
           className="absolute inset-0 w-full h-full object-cover object-[22%_50%] md:object-center opacity-45 md:opacity-70 scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/60 via-charcoal/30 to-transparent hidden md:block" />
@@ -46,12 +46,12 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 md:px-8 -mt-16 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
           {[
-            { name: "Handbags", to: "/category/handbags", img: "/img/luna-mini-shoulder-bag-1.svg" },
-            { name: "Jewelry", to: "/category/jewelry", img: "/img/layered-chain-necklace-1.svg" },
-            { name: "Watches", to: "/category/watches", img: "/img/minimal-dial-watch-taupe-1.svg" },
-            { name: "Sunglasses", to: "/category/sunglasses", img: "/img/cat-eye-sunglasses-black-1.svg" },
-            { name: "Scarves", to: "/category/scarves", img: "/img/silk-print-scarf-taupe-1.svg" },
-            { name: "Gift Sets", to: "/category/gift-sets", img: "/img/luxury-accessory-gift-set-1.svg" },
+            { name: "Handbags", to: "/category/handbags", img: "/img/photos/cat-handbags.jpg" },
+            { name: "Jewelry", to: "/category/jewelry", img: "/img/photos/cat-jewelry.jpg" },
+            { name: "Watches", to: "/category/watches", img: "/img/photos/cat-watches.jpg" },
+            { name: "Sunglasses", to: "/category/sunglasses", img: "/img/photos/cat-sunglasses.jpg" },
+            { name: "Scarves", to: "/category/scarves", img: "/img/photos/cat-scarves.jpg" },
+            { name: "Gift Sets", to: "/category/gift-sets", img: "/img/photos/cat-gift-sets.jpg" },
           ].map((cat) => (
             <Link key={cat.name} to={cat.to} className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-elevated transition-all duration-500 aspect-[4/5] md:aspect-[3/4]">
               <img src={cat.img} alt={cat.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -80,7 +80,7 @@ export default function Home() {
 
       {/* PROMOTIONAL BANNER */}
       <section className="relative overflow-hidden mt-16 md:mt-24">
-        <img src="/img/banner-editorial.svg" alt="Signature pieces - ring, necklace, wallet, bangles, scarf and hoops" className="w-full h-[420px] md:h-[500px] object-cover" />
+        <img src="/img/photos/banner.jpg" alt="Silver necklace and pearl necklace from the Luna &amp; Lace collection" className="w-full h-[420px] md:h-[500px] object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/40 to-transparent" />
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
@@ -148,10 +148,10 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {[
-            { src: "/img/gold-pearl-drop-earrings-1.svg", alt: "Gold pearl drop earrings styled" },
-            { src: "/img/evening-clutch-rose-gold-1.svg", alt: "Rose gold evening clutch" },
-            { src: "/img/vintage-signet-ring-1.svg", alt: "Vintage signet ring" },
-            { src: "/img/slim-card-holder-tan-1.svg", alt: "Slim tan card holder" },
+            { src: "/img/photos/gallery-1.jpg", alt: "Tan leather handbag styled with a belt" },
+            { src: "/img/photos/gallery-2.jpg", alt: "Pearl choker necklace detail" },
+            { src: "/img/photos/gallery-3.jpg", alt: "Stacked gold bangles" },
+            { src: "/img/photos/gallery-4.jpg", alt: "Gold bangles and pearls from the collection" },
           ].map((item) => (
             <a key={item.src} href={storeConfig.socialLinks.instagram} target="_blank" rel="noreferrer" className="group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-[3/4] block shadow-card hover:shadow-elevated transition-all duration-500">
               <img src={item.src} alt={item.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
