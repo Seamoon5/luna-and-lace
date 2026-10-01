@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastProvider } from "./components/ToastProvider";
+import ScrollToTop from "./components/ScrollToTop";
 import { CartProvider } from "./hooks/useCart";
 import { WishlistProvider } from "./hooks/useWishlist";
 import Layout from "./components/Layout";
@@ -29,6 +30,7 @@ export default function App() {
       <CartProvider>
         <WishlistProvider>
           <BrowserRouter>
+            <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />

@@ -2,6 +2,32 @@ import { Link } from "react-router-dom";
 import { Globe, Mail, MessageCircle } from "lucide-react";
 import { storeConfig } from "../config/store";
 
+const SHOP_LINKS = [
+  { label: "New Arrivals", to: "/shop?filter=new" },
+  { label: "Best Sellers", to: "/shop?filter=best" },
+  { label: "Handbags", to: "/category/handbags" },
+  { label: "Jewelry", to: "/category/jewelry" },
+  { label: "Watches", to: "/category/watches" },
+  { label: "Sale", to: "/shop?filter=sale" },
+];
+
+const HELP_LINKS = [
+  { label: "Contact Us", to: "/contact" },
+  { label: "FAQ", to: "/faq" },
+  { label: "Shipping", to: "/shipping" },
+  { label: "Returns", to: "/returns" },
+  { label: "Track Order", to: "/account" },
+  { label: "Account", to: "/account" },
+];
+
+const COMPANY_LINKS = [
+  { label: "About Us", to: "/about" },
+  { label: "Our Story", to: "/about" },
+  { label: "Privacy Policy", to: "/privacy" },
+  { label: "Terms & Conditions", to: "/terms" },
+  { label: "Shipping Policy", to: "/shipping" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-charcoal text-ivory">
@@ -17,8 +43,8 @@ export default function Footer() {
           <div>
             <h4 className="text-[11px] font-semibold tracking-[0.15em] uppercase mb-5 text-ivory/90">Shop</h4>
             <nav className="flex flex-col gap-2.5">
-              {["New Arrivals", "Best Sellers", "Handbags", "Jewelry", "Watches", "Sale"].map((item) => (
-                <Link key={item} to="/shop" className="text-sm text-sand/70 hover:text-ivory transition-colors">{item}</Link>
+              {SHOP_LINKS.map((item) => (
+                <Link key={item.label} to={item.to} className="text-sm text-sand/70 hover:text-ivory transition-colors">{item.label}</Link>
               ))}
             </nav>
           </div>
@@ -27,8 +53,8 @@ export default function Footer() {
           <div>
             <h4 className="text-[11px] font-semibold tracking-[0.15em] uppercase mb-5 text-ivory/90">Help</h4>
             <nav className="flex flex-col gap-2.5">
-              {["Contact Us", "FAQ", "Shipping", "Returns", "Track Order", "Account"].map((item) => (
-                <Link key={item} to={item === "Contact Us" ? "/contact" : item === "FAQ" ? "/faq" : item === "Shipping" ? "/shipping" : item === "Returns" ? "/returns" : item === "Account" ? "/account" : "/faq"} className="text-sm text-sand/70 hover:text-ivory transition-colors">{item}</Link>
+              {HELP_LINKS.map((item) => (
+                <Link key={item.label} to={item.to} className="text-sm text-sand/70 hover:text-ivory transition-colors">{item.label}</Link>
               ))}
             </nav>
           </div>
@@ -37,8 +63,8 @@ export default function Footer() {
           <div>
             <h4 className="text-[11px] font-semibold tracking-[0.15em] uppercase mb-5 text-ivory/90">Company</h4>
             <nav className="flex flex-col gap-2.5">
-              {["About Us", "Our Story", "Privacy Policy", "Terms & Conditions", "Shipping Policy"].map((item) => (
-                <Link key={item} to={item === "About Us" ? "/about" : item === "Privacy Policy" ? "/privacy" : item === "Terms & Conditions" ? "/terms" : item === "Shipping Policy" ? "/shipping" : "/about"} className="text-sm text-sand/70 hover:text-ivory transition-colors">{item}</Link>
+              {COMPANY_LINKS.map((item) => (
+                <Link key={item.label} to={item.to} className="text-sm text-sand/70 hover:text-ivory transition-colors">{item.label}</Link>
               ))}
             </nav>
           </div>
@@ -48,11 +74,11 @@ export default function Footer() {
           <p className="text-xs text-sand/40">© 2026 {storeConfig.brandName}. All rights reserved.</p>
           <div className="flex gap-2">
             {[
-              { icon: Globe, label: "Instagram" },
-              { icon: MessageCircle, label: "TikTok" },
-              { icon: Mail, label: "Email" },
+              { icon: Globe, label: "Instagram", href: storeConfig.socialLinks.instagram },
+              { icon: MessageCircle, label: "TikTok", href: storeConfig.socialLinks.tiktok },
+              { icon: Mail, label: "Email", href: `mailto:${storeConfig.contactEmail}` },
             ].map((social) => (
-              <a key={social.label} href="#" aria-label={social.label} className="p-2.5 rounded-full bg-white/5 hover:bg-white/10 text-sand/70 hover:text-ivory transition-all">
+              <a key={social.label} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label} className="p-2.5 rounded-full bg-white/5 hover:bg-white/10 text-sand/70 hover:text-ivory transition-all">
                 <social.icon size={16} strokeWidth={1.5} />
               </a>
             ))}

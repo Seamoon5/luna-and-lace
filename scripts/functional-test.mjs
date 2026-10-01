@@ -192,6 +192,34 @@ await page.keyboard.press('Tab');
 const focused = await page.evaluate(() => document.activeElement?.tagName);
 ok('Keyboard focus moves into the page', !!focused, focused);
 
+// --- 15b. a new page must open at the top, not where the last page was
+await go('/');
+await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+await page.waitForTimeout(300);
+const beforeY = await page.evaluate(() => Math.round(window.scrollY));
+for (const [label, expect] of [
+  ['About Us', 'story'],
+  ['Contact Us', 'contact'],
+  ['Returns', 'return'],
+  ['Watches', 'watch'],
+]) {
+  const link = page.locator(`footer a:has-text("${label}")`).first();
+  if (!(await link.count())) {
+    ok(`Footer link "${label}" exists`, false, 'not found');
+    continue;
+  }
+  await link.click({ force: true });
+  await page.waitForTimeout(600);
+  const y = await page.evaluate(() => Math.round(window.scrollY));
+  const heading = (await page.locator('main h1, main h2').first().innerText().catch(() => '')).toLowerCase();
+  ok(`"${label}" opens at the top of the page`, y === 0, `scrollY=${y} heading="${heading.slice(0, 24)}"`);
+  ok(`"${label}" lands on the right page`, heading.includes(expect), heading.slice(0, 30));
+  await page.goto(base + '/', { waitUntil: 'networkidle' });
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await page.waitForTimeout(200);
+}
+ok('Home page is genuinely long (bug was real)', beforeY > 1000, 'scrolled to ' + beforeY + 'px');
+
 // --- 16. mobile menu
 const mctx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
 const mp = await mctx.newPage();
