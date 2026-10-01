@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastProvider } from "./components/ToastProvider";
+import { CartProvider } from "./hooks/useCart";
+import { WishlistProvider } from "./hooks/useWishlist";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
@@ -23,7 +25,10 @@ import NotFound from "./pages/NotFound";
 export default function App() {
   return (
     <ToastProvider>
-      <BrowserRouter>
+      {/* One shared cart + wishlist for every page, so the header count is always right. */}
+      <CartProvider>
+        <WishlistProvider>
+          <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -46,7 +51,9 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+          </BrowserRouter>
+        </WishlistProvider>
+      </CartProvider>
     </ToastProvider>
   );
 }
