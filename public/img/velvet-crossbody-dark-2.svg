@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf8f5"/>
+      <stop offset="1" stop-color="#efeae1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8d6a2"/>
+      <stop offset="0.45" stop-color="#c9a227"/>
+      <stop offset="1" stop-color="#a37f3f"/>
+    </linearGradient>
+    <radialGradient id="pearlsheen" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f3e7dc"/>
+      <stop offset="1" stop-color="#d9c6b6"/>
+    </radialGradient>
+<linearGradient id="p" x1="0.15" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#7c3339"/>
+      <stop offset="1" stop-color="#521f24"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+  <ellipse cx="600" cy="1206" rx="264" ry="31" fill="#2d2b28" opacity="0.15"/>
+  <g transform="translate(-76.1,-45.9) scale(1.127)"><path d="M390 640 Q600 236 810 640" fill="none" stroke="#3e171b" stroke-width="22" stroke-linecap="round"/><path d="M390 630 Q600 250 810 630" fill="none" stroke="#7c3339" stroke-width="6" stroke-linecap="round" opacity="0.45"/><path d="M340 636 Q600 604 860 636 L872 1020 Q874 1080 812 1088 L388 1088 Q326 1080 328 1020 Z" fill="url(#p)" stroke="#3b372f" stroke-width="5" stroke-linejoin="round"/><path d="M340 660 Q600 632 860 660 L864 800 Q600 768 336 800 Z" fill="#481b20" stroke="#3b372f" stroke-width="4" stroke-linejoin="round"/><circle cx="600" cy="812" r="40" fill="url(#gold)" stroke="#a37f3f" stroke-width="3"/><circle cx="600" cy="812" r="16" fill="#a37f3f" opacity="0.6"/><rect x="372" y="660" width="120" height="360" rx="60" fill="#ffffff" opacity="0.17" transform="rotate(-8 432.0 840.0)"/></g>
+</svg>

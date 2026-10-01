@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --color-ivory: #faf8f5;
+  --color-ivory-deep: #f5f2ec;
+  --color-paper: #fdfcfb;
+  --color-charcoal: #1a1816;
+  --color-stone: #2d2b28;
+  --color-taupe: #6e6a62;
+  --color-warm: #8a847c;
+  --color-sand: #c5bfb5;
+  --color-beige: #e8e4db;
+  --color-rose-dust: #c49a8c;
+  --color-rose-dust-deep: #a87d6e;
+  --color-rose-dust-soft: #f5ebe7;
+  --color-cream: #ede9e0;
+  --color-ink: #0f0e0c;
+
+  --shadow-card: 0 1px 3px rgba(15,14,12,0.04), 0 8px 24px rgba(15,14,12,0.05);
+  --shadow-elevated: 0 4px 20px rgba(15,14,12,0.08);
+  --shadow-modal: 0 25px 60px rgba(15,14,12,0.12);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; background: #faf8f5; color: #1a1816; letter-spacing: 0.01em; }
+  ::selection { background: #f5ebe7; color: #1a1816; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; }
+  h1,h2,h3,h4,h5,h6 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; color: #1a1816; line-height: 1.1; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+}

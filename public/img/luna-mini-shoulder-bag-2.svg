@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf8f5"/>
+      <stop offset="1" stop-color="#efeae1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8d6a2"/>
+      <stop offset="0.45" stop-color="#c9a227"/>
+      <stop offset="1" stop-color="#a37f3f"/>
+    </linearGradient>
+    <radialGradient id="pearlsheen" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f3e7dc"/>
+      <stop offset="1" stop-color="#d9c6b6"/>
+    </radialGradient>
+<linearGradient id="p" x1="0.15" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#d9b3a5"/>
+      <stop offset="1" stop-color="#b98d7d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+  <ellipse cx="600" cy="1206" rx="261" ry="30" fill="#2d2b28" opacity="0.15"/>
+  <g transform="translate(-17.0,-89.0) scale(1.030)"><path d="M455 520 Q455 330 600 322 Q745 330 745 520" fill="none" stroke="#a67f70" stroke-width="30" stroke-linecap="round"/><path d="M455 512 Q455 336 600 328 Q745 336 745 512" fill="none" stroke="#d9b3a5" stroke-width="9" stroke-linecap="round" opacity="0.55"/><path d="M330 560 Q196 700 232 1120" fill="none" stroke="#b98d7d" stroke-width="20" stroke-linecap="round" opacity="0.92"/><circle cx="232" cy="1128" r="20" fill="url(#gold)"/><path d="M330 560 Q330 520 372 512 L828 512 Q870 520 870 560 L892 1160 Q894 1225 830 1232 L370 1232 Q306 1225 308 1160 Z" fill="url(#p)" stroke="#3b372f" stroke-width="5" stroke-linejoin="round"/><rect x="352" y="1218" width="46" height="20" rx="8" fill="url(#gold)"/><rect x="802" y="1218" width="46" height="20" rx="8" fill="url(#gold)"/><path d="M330 520 Q600 470 870 520 L880 640 Q600 596 320 640 Z" fill="#9d786a" stroke="#3b372f" stroke-width="5" stroke-linejoin="round"/><rect x="558" y="596" width="84" height="52" rx="14" fill="url(#gold)" stroke="#a37f3f" stroke-width="3"/><rect x="576" y="612" width="48" height="20" rx="8" fill="#a37f3f" opacity="0.55"/><rect x="360" y="620" width="150" height="520" rx="75" fill="#ffffff" opacity="0.16" transform="rotate(-8 435.0 880.0)"/><path d="M370 1180 Q600 1215 830 1180" fill="none" stroke="#b98d7d" stroke-width="4" opacity="0.35"/></g>
+</svg>

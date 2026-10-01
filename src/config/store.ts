@@ -1,0 +1,20 @@
+export const storeConfig = {
+  brandName: "Luna & Lace",
+  tagline: "Accessories That Complete Your Look.",
+  currency: "PKR",
+  currencySymbol: "Rs.",
+  contactEmail: "hello@lunaandlace.com",
+  phone: "+92 300 123 4567",
+  address: "Karachi, Pakistan",
+  socialLinks: {
+    instagram: "https://instagram.com/lunaandlace",
+    facebook: "https://facebook.com/lunaandlace",
+    tiktok: "https://tiktok.com/@lunaandlace",
+    pinterest: "https://pinterest.com/lunaandlace",
+  },
+  shippingThreshold: 5000,
+  defaultShippingCost: 250,
+  freeShippingText: "Free shipping on orders over Rs. 5,000",
+  announcementText: "Free Shipping on Orders Over Rs. 5,000 — New Collection Now Live",
+  demoLabel: "This is a demo store. Orders are simulated locally.",
+};

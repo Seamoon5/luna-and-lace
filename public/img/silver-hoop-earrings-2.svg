@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf8f5"/>
+      <stop offset="1" stop-color="#efeae1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8d6a2"/>
+      <stop offset="0.45" stop-color="#c9a227"/>
+      <stop offset="1" stop-color="#a37f3f"/>
+    </linearGradient>
+    <radialGradient id="pearlsheen" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f3e7dc"/>
+      <stop offset="1" stop-color="#d9c6b6"/>
+    </radialGradient>
+<linearGradient id="p" x1="0.15" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#d8b45f"/>
+      <stop offset="1" stop-color="#a37f3f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+  <ellipse cx="600" cy="953" rx="378" ry="44" fill="#2d2b28" opacity="0.15"/>
+  <g transform="translate(-9.7,-100.7) scale(1.016)"><circle cx="388" cy="790" r="190" fill="none" stroke="url(#p)" stroke-width="62"/><circle cx="388" cy="790" r="221" fill="none" stroke="#3b372f" stroke-width="3" opacity="0.5"/><circle cx="388" cy="790" r="159" fill="none" stroke="#3b372f" stroke-width="3" opacity="0.5"/><path d="M218 860 A190 190 0 0 1 348 616" fill="none" stroke="#d8b45f" stroke-width="14" stroke-linecap="round" opacity="0.6"/><rect x="373" y="555" width="30" height="44" rx="10" fill="url(#gold)" stroke="#a37f3f" stroke-width="3"/><circle cx="388" cy="1005" r="17" fill="url(#gold)" stroke="#a37f3f" stroke-width="3"/><circle cx="812" cy="790" r="190" fill="none" stroke="url(#p)" stroke-width="62"/><circle cx="812" cy="790" r="221" fill="none" stroke="#3b372f" stroke-width="3" opacity="0.5"/><circle cx="812" cy="790" r="159" fill="none" stroke="#3b372f" stroke-width="3" opacity="0.5"/><path d="M642 860 A190 190 0 0 1 772 616" fill="none" stroke="#d8b45f" stroke-width="14" stroke-linecap="round" opacity="0.6"/><rect x="797" y="555" width="30" height="44" rx="10" fill="url(#gold)" stroke="#a37f3f" stroke-width="3"/><circle cx="812" cy="1005" r="17" fill="url(#gold)" stroke="#a37f3f" stroke-width="3"/></g>
+</svg>

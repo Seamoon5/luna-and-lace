@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf8f5"/>
+      <stop offset="1" stop-color="#efeae1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8d6a2"/>
+      <stop offset="0.45" stop-color="#c9a227"/>
+      <stop offset="1" stop-color="#a37f3f"/>
+    </linearGradient>
+    <radialGradient id="pearlsheen" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f3e7dc"/>
+      <stop offset="1" stop-color="#d9c6b6"/>
+    </radialGradient>
+<linearGradient id="p" x1="0.15" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#b5aca0"/>
+      <stop offset="1" stop-color="#8b8175"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+  <ellipse cx="600" cy="1206" rx="228" ry="26" fill="#2d2b28" opacity="0.15"/>
+  <g transform="translate(-1.3,-70.6) scale(1.002)"><path d="M432 480 L432 356 Q432 300 488 300 Q544 300 544 356 L544 480" fill="none" stroke="#7d7469" stroke-width="26" stroke-linecap="round"/><path d="M656 480 L656 356 Q656 300 712 300 Q768 300 768 356 L768 480" fill="none" stroke="#7d7469" stroke-width="26" stroke-linecap="round"/><path d="M432 470 L432 360 Q432 306 488 306" fill="none" stroke="#b5aca0" stroke-width="7" stroke-linecap="round" opacity="0.5"/><path d="M336 480 L864 480 L846 1198 Q844 1240 800 1240 L400 1240 Q356 1240 354 1198 Z" fill="url(#p)" stroke="#3b372f" stroke-width="5" stroke-linejoin="round"/><rect x="336" y="612" width="528" height="10" fill="#8b8175" opacity="0.3"/><rect x="336" y="1010" width="528" height="8" fill="#8b8175" opacity="0.22"/><rect x="700" y="640" width="72" height="94" rx="10" fill="url(#gold)" stroke="#a37f3f" stroke-width="3"/><rect x="392" y="1230" width="48" height="18" rx="8" fill="url(#gold)"/><rect x="760" y="1230" width="48" height="18" rx="8" fill="url(#gold)"/><rect x="380" y="520" width="130" height="660" rx="65" fill="#ffffff" opacity="0.15" transform="rotate(-7 445.0 850.0)"/></g>
+</svg>
